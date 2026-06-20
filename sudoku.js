@@ -27,7 +27,6 @@ var solution = [
     "934176852",
     "675832941",
     "812945763",
-
 ]
 
 window.onload = function(){
@@ -39,7 +38,7 @@ function setGame() {
     for (let i = 1; i<=9; i++) {
         //<div id="1"></div> 
         let number = document.createElement("div");
-        number.id = 1 
+        number.id = i
         number.innerText = i;
         number.addEventListener("click", selectNumber);
         number.classList.add("number");
@@ -51,7 +50,7 @@ function setGame() {
         for (let c = 0; c < 9; c++) {
             let tile = document.createElement("div");
             tile.id = r.toString() + "-" + c.toString();
-            if (board[r][c] != "-"){
+            if (board[r][c] != "-") {
                 tile.innerText = board[r][c];
                 tile.classList.add("tile-start");
             }
@@ -90,7 +89,7 @@ function selectTile() {
         let c=parseInt(coords[1]);
 
         if (solution[r][c] == numSelected.id) {
-            this.innerText =numSelected.id;
+            this.innerText = numSelected.id;
         }
         else{
             errors += 1;
