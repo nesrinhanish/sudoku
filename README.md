@@ -1,2 +1,2 @@
 # sudoku
-Making my very own soduko
+Making my very own sudoku
