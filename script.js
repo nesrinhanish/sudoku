@@ -78,7 +78,7 @@ function selectNumber(){
 
 function selectTile() {
     if (numSelected) {
-        if (this.innerText != " ") {
+        if (this.innerText = "") {
             return;
         }
        
